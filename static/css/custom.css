@@ -17,7 +17,6 @@ img {
   border: 0;
 }
 
-header,
 footer {
   margin: 4rem 0;
   text-align: center;
@@ -29,10 +28,11 @@ main {
 
 .container {
   width: 90%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .site-title {
+  font-weight: normal;
   margin-top: 2rem;
   font-family: 'Poiret One', cursive;
 }
@@ -42,11 +42,17 @@ main {
 }
 
 .entry-title {
+  margin-top: 0;
   margin-bottom: 0;
+  border-bottom: none;
 }
 
 .entry-title a {
   text-decoration: none;
+}
+
+.entry-title-article {
+  font-size: 2.5rem;
 }
 
 .entry-meta {
@@ -67,4 +73,28 @@ main {
   background: -webkit-gradient(linear, left top, right top, from(white), color-stop(#E1E1E1), to(white));
   background: -webkit-linear-gradient(left, white, #E1E1E1, white);
   background: linear-gradient(to right, white, #E1E1E1, white);
+}
+
+.table-of-contents-title {
+    margin-top: 0;
+}
+.table-of-contents {
+    float: right;
+    width: 40%;
+    border: 1px solid #e5e5e5;
+    margin-left: 1em;
+    padding: 1.5em 1.5em;
+    background: #fff;
+}
+
+.table-of-contents li, ul ul, ul{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h1 { font-weight: bold; }
+.contents h1, h2, h3 {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
 }
