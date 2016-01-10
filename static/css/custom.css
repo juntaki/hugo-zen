@@ -78,11 +78,18 @@ main {
 .table-of-contents-title {
     margin-top: 0;
 }
+
+@media screen and ( min-width:800px )
+{
+    .table-of-contents {
+        float: right;
+        width: 40%;
+    }
+}
+
 .table-of-contents {
-    float: right;
-    width: 40%;
     border: 1px solid #e5e5e5;
-    margin-left: 1em;
+    margin: 1em;
     padding: 1.5em 1.5em;
     background: #fff;
 }
