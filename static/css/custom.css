@@ -104,3 +104,16 @@ h1 { font-weight: bold; }
     margin-bottom: 1rem;
     margin-top: 3rem;
 }
+
+/* http://hayashikejinan.com/webwork/css/913/ */
+/* Font Awesome hatena bookmark */
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold
+}
+
+.share {
+  margin: 1px;
+  text-decoration: none;
+}

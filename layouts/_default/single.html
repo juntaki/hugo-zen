@@ -4,6 +4,7 @@
 		<article itemscope itemtype="http://schema.org/BlogPosting">
 			<h1 class="entry-title entry-title-article" itemprop="headline">{{ .Title }}</h1>
 			<span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+{{ partial "social.html" . }}
 			<section itemprop="entry-text">
 				<div id="toc" class="table-of-contents">
 					<h2 class="table-of-contents-title">目次</h2>
