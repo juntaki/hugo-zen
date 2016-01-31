@@ -9,20 +9,13 @@ h4,
 h5,
 h6 { font-size: 1.5rem; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  border: 0;
-}
-
 footer {
-  margin: 4rem 0;
-  text-align: center;
+  margin: 2rem 0;
 }
 
 main {
-  margin: 4rem 0;
+  margin: 4rem 0 2rem 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .container {
@@ -61,17 +54,8 @@ main {
   color: #888;
 }
 
-.footer-link {
-  margin: 2rem 0;
-}
-
-.hr {
-  height: 1px;
-  margin: 2rem 0;
-  background: #E1E1E1;
-  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(#E1E1E1), to(white));
-  background: -webkit-linear-gradient(left, white, #E1E1E1, white);
-  background: linear-gradient(to right, white, #E1E1E1, white);
+a.footer-link {
+  text-decoration: none;
 }
 
 .table-of-contents-title {
@@ -80,22 +64,19 @@ main {
 
 @media screen and ( min-width:800px )
 {
-    .table-of-contents {
-        float: right;
-        width: 40%;
-    }
-}
-
-.table-of-contents {
+  .table-of-contents {
     border: 1px solid #e5e5e5;
+    float: right;
+    width: 40%;
     margin: 1em;
     padding: 1.5em 1.5em;
-    background: #fff;
+    Background: #fff;
+  }
 }
 
 .table-of-contents li, ul ul, ul{
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
 h1 { font-weight: bold; }
