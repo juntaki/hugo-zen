@@ -58,6 +58,17 @@ a.footer-link {
   text-decoration: none;
 }
 
+.related-link {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 1em;
+  padding: 1.5em 1.5em;
+  Background: #fff;
+}
+
+.related-link-title {
+    margin-top: 0;
+}
+
 .table-of-contents-title {
     margin-top: 0;
 }

@@ -15,6 +15,26 @@
 				</div>
 			</section>
 		</article>
+		<div class="related-link">
+			<h2 class="related-link-title">関連記事</h2>
+			{{ if .Next }}
+			<div>前の記事：<a href="{{.Next.RelPermalink}}">{{.Next.Title}}</a></div>
+			{{ end }}
+			{{ if .Prev }}
+			<div>次の記事：<a href="{{.Prev.RelPermalink}}">{{.Prev.Title}}</a></div>
+			{{ end }}
+			{{ $page_link := .Permalink }}
+			{{ $tags := .Params.categories }}
+			{{ $date := .Date }}
+			{{ range $index, $page := .Site.Pages }}
+			{{ $has_common_tags := intersect $tags .Params.categories | len | lt 0 }}
+			{{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+			{{ if lt 5 $index }}
+			<div><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></div>
+			{{ end }}
+			{{ end }}
+			{{ end }}
+		</div>
 	</main>
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
