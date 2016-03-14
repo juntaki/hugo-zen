@@ -1,9 +1,8 @@
 	<footer role="contentinfo">
 		<div class="footer-link">
 			&copy; {{ .Site.Params.copyright }}
-			{{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" class="footer-link" target="_blank">
-			<i class="fa fa-twitter"></i>@{{ . }}</a></span>{{ end }}
-			{{ with .Site.Params.github }}<a href="https://github.com/{{ . }}" class="footer-link" target="_blank"><i class="fa fa-github"></i>GitHub</a></span>{{ end }}
+			{{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" class="footer-link" target="_blank"><i class="fa fa-twitter"></i>@{{ . }}</a>{{ end }}
+			{{ with .Site.Params.github }}<a href="https://github.com/{{ . }}" class="footer-link" target="_blank"><i class="fa fa-github"></i>GitHub</a>{{ end }}
 		</div>
 	</footer>
 </div>
