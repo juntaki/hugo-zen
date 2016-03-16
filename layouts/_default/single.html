@@ -26,7 +26,7 @@
 			{{ $page_link := .Permalink }}
 			{{ $tags := .Params.categories }}
 			{{ $date := .Date }}
-			{{ range $index, $page := .Site.Pages.Reverse }}
+			{{ range $index, $page := .Site.Pages }}
 			{{ $has_common_tags := intersect $tags .Params.categories | len | lt 0 }}
 			{{ if and $has_common_tags (ne $page_link $page.Permalink) }}
 			{{ if lt 5 $index }}
