@@ -1,5 +1,4 @@
-<a class="share" href="https://twitter.com/intent/tweet?text={{ .LinkTitle }}&url={{ .Permalink }}&related=juntaki?original_referer={{ .Permalink }}" onClick="window.open(this.href, 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow"><i class="fa fa-twitter"></i></a>
-
-<a class="share" target="_blank"  href="http://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ .Title }}" target="_blank"><i class="fa fa-hatena"></i></a>
-
+{{ $isHomePage := eq .Title .Site.Title }}
+<a class="share" href="https://twitter.com/intent/tweet?text={{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}&url={{ .Permalink }}&related=juntaki?original_referer={{ .Permalink }}" onClick="window.open(this.href, 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow"><i class="fa fa-twitter"></i></a>
+<a class="share" target="_blank"  href="http://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" target="_blank"><i class="fa fa-hatena"></i></a>
 <a class="share" href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fjuntaki.com%2Findex.xml'  target='blank'><i class="fa fa-rss"></i></a>
