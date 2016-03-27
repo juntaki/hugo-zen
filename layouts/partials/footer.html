@@ -1,6 +1,11 @@
+{{ $isHomePage := eq .Title .Site.Title }}
 	<footer role="contentinfo">
 		<div class="footer-link">
-			&copy; {{ .Site.Params.copyright }}
+{{ if eq $isHomePage false }}
+			&copy; {{ .Date.Format "2006" }} {{ .Site.Params.copyright }}
+{{ else }}
+			&copy; 2015 {{ .Site.Params.copyright }}
+{{ end }}
 			{{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}" class="footer-link" target="_blank"><i class="fa fa-twitter"></i>@{{ . }}</a>{{ end }}
 			{{ with .Site.Params.github }}<a href="https://github.com/{{ . }}" class="footer-link" target="_blank"><i class="fa fa-github"></i>GitHub</a>{{ end }}
 		</div>
